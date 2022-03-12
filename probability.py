@@ -25,18 +25,8 @@ def roll_dice_for_conditional():
     return general_list
 
 
-def probability1(data_list):
+def probability1_2(data_list):
     return 3 in data_list
-
-
-def probability2(data_list):
-    if 3 in data_list:
-        for even_checker in data_list:
-            if even_checker % 2 == 0:
-                return True
-        return False
-    else:
-        return False
 
 
 def probability3(data_list):
@@ -61,10 +51,10 @@ def roll_dice_multiple(experiment_parameter):
         for looper_var in range(iterator):
             if experiment_parameter == 1:
                 plt.axhline(y=59.812, color='r', linestyle=':')
-                booler = probability1(roll_dice())
+                booler = probability1_2(roll_dice())
             elif experiment_parameter == 2:
                 plt.axhline(y=52.953, color='g', linestyle=':')
-                booler = probability1(roll_dice_for_conditional())
+                booler = probability1_2(roll_dice_for_conditional())
             elif experiment_parameter == 3:
                 plt.axhline(y=12.037, color='b', linestyle=':')
                 booler = probability3(roll_dice())
